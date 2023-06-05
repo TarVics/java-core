@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @ToString()
 @Setter
@@ -14,7 +15,5 @@ public class Book {
     String genre;
     String[] authors;
 
-    public Book() {
-    }
 }
 
