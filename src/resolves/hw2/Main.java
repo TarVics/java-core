@@ -4,6 +4,7 @@ import resolves.hw2.task1.Address;
 import resolves.hw2.task1.Company;
 import resolves.hw2.task1.Geo;
 import resolves.hw2.task1.User;
+import resolves.hw2.task2.PC;
 import resolves.hw2.task2.Ultrabook;
 import resolves.hw2.task2.Workstation;
 import resolves.hw2.task3.Comics;
@@ -79,11 +80,13 @@ public class Main {
     // PC-Laptop-Workstation
     // Загальна кількість вкористаних класів - 4!
     public static void task2() {
-        Workstation ws = new Workstation();
-        Ultrabook ub = new Ultrabook();
+        PC ws = new Workstation();
+        PC ub = new Ultrabook();
 
         System.out.println(ws);
+        ws.hello();
         System.out.println(ub);
+        ub.hello();
     }
 
     // Cтворити клас ланцюг наслідування:
@@ -319,10 +322,10 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        task1();
+//        task1();
         task2();
-        task3();
-        task4();
-        task5();
+//        task3();
+//        task4();
+//        task5();
     }
 }

@@ -4,6 +4,11 @@ public class Workstation extends Laptop {
 
     private double size = 27;
 
+    @Override
+    public void hello() {
+        System.out.println("Hello Workstation");
+    }
+
     public Workstation(double size) {
         this.size = size;
     }

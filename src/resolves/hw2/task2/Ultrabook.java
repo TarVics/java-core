@@ -3,6 +3,11 @@ package resolves.hw2.task2;
 public class Ultrabook extends Laptop {
     private double size = 14.5;
 
+    @Override
+    public void hello() {
+        System.out.println("Hello Ultrabook");
+    }
+
     public Ultrabook(double size) {
         this.size = size;
     }
