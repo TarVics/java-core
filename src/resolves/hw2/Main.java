@@ -15,6 +15,9 @@ import resolves.hw2.task4.Skill;
 import resolves.hw2.task5.Comment;
 import resolves.hw2.task5.Post;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Main {
 
     // Task1
@@ -322,10 +325,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//        task1();
+        task1();
         task2();
-//        task3();
-//        task4();
-//        task5();
+        task3();
+        task4();
+        task5();
     }
 }
+
+
