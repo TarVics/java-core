@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Tube implements Instrument {
+public class Trumpet implements Instrument {
     private int diameter;
 
     @Override

@@ -7,7 +7,7 @@ import resolves.hw3.task1.Printable;
 import resolves.hw3.task2.Drum;
 import resolves.hw3.task2.Guitar;
 import resolves.hw3.task2.Instrument;
-import resolves.hw3.task2.Tube;
+import resolves.hw3.task2.Trumpet;
 
 
 public class Main {
@@ -48,10 +48,10 @@ public class Main {
         Instrument[] instruments = {
             new Guitar(7),
             new Drum(35),
-            new Tube(5),
+            new Trumpet(5),
             new Guitar(17),
             new Drum(135),
-            new Tube(50)
+            new Trumpet(50)
         };
 
         for (Instrument instrument : instruments) {
