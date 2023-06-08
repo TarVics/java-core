@@ -12,8 +12,9 @@ public class Drum implements Instrument {
 
     @Override
     public void play() {
-        String name = this.getClass().getName();
-        System.out.println("Playing " + name.substring(name.lastIndexOf('.') + 1) +
+//        String name = this.getClass().getName();
+//        System.out.println("Playing " + name.substring(name.lastIndexOf('.') + 1) +
+        System.out.println("Playing " + this.getClass().getSimpleName() +
                 "(size: " + size + ")");
     }
 }
