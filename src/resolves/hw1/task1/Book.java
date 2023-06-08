@@ -1,4 +1,4 @@
-package resolves.hw1;
+package resolves.hw1.task1;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

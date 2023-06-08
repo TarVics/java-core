@@ -1,4 +1,4 @@
-package resolves.hw1;
+package resolves.hw1.task2;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -8,12 +8,13 @@ import lombok.experimental.FieldDefaults;
 @ToString
 @Setter
 @Getter
-public class Post {
-    int userId;
+public class Comment {
+    int postId;
     int id;
-    String title;
+    String name;
+    String email;
     String body;
 
-    public Post() {
+    public Comment() {
     }
 }
