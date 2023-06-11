@@ -182,7 +182,7 @@ public class Main {
         // OR:
         System.out.println("Sorted by Skill Count:");
         usersTreeSet.stream()
-                .sorted(Comparator.comparingInt(o -> o.getSkills().size()))
+                //.sorted(Comparator.comparingInt(o -> o.getSkills().size()))
                 .forEach(System.out::println);
     }
 }

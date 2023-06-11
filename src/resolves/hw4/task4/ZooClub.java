@@ -2,10 +2,7 @@ package resolves.hw4.task4;
 
 import lombok.NoArgsConstructor;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @NoArgsConstructor
 public class ZooClub {
@@ -19,6 +16,15 @@ public class ZooClub {
 
     public Person addPerson(String personName) {
         return addPerson(new Person(personName));
+    }
+
+    public Person getPerson(String personName) {
+        return club
+                .keySet()
+                .stream()
+                .filter(person -> personName.equals(person.getName()))
+                .findFirst()
+                .orElse(null);
     }
 
     // 2) додати тваринку до учасника клубу.
@@ -41,7 +47,7 @@ public class ZooClub {
 
     // 4) видалити учасника клубу.
     public boolean removePerson(Person person) {
-        return club.entrySet().removeIf(entry -> entry.getKey() == person);
+        return club.remove(person) != null;
     }
 
     public boolean removePerson(String personName) {
@@ -50,25 +56,30 @@ public class ZooClub {
 
     // 5) видалити конкретну тваринку з усіх власників.
     public boolean removePet(Pet pet) {
-        boolean result = false;
+        final boolean[] result = { false };
 
-        for (Map.Entry<Person, List<Pet>> entry : club.entrySet()) {
-            Person person = entry.getKey();
-            result |= person.removePet(pet);
-        }
+//        for (Map.Entry<Person, List<Pet>> entry : club.entrySet()) {
+//            Person person = entry.getKey();
+//            result[0] |= person.removePet(pet);
+//        }
 
-        return result;
+        club.values().forEach(list -> result[0] |= list.remove(pet));
+
+        return result[0];
     }
 
     public boolean removePet(String petName) {
-        boolean result = false;
+        final boolean[] result = { false };
 
-        for (Map.Entry<Person, List<Pet>> entry : club.entrySet()) {
-            Person person = entry.getKey();
-            result |= person.removePet(petName);
-        }
+//        for (Map.Entry<Person, List<Pet>> entry : club.entrySet()) {
+//            Person person = entry.getKey();
+//            result[0] |= person.removePet(petName);
+//        }
 
-        return result;
+        club.values().forEach(list ->
+            result[0] |= list.removeIf(pet -> petName.equals(pet.getName())));
+
+        return result[0];
     }
 
     // 6) вивести на екран зооклуб.
