@@ -29,6 +29,5 @@ public class User implements Comparable<User> {
     @Override
     public int compareTo(User o) {
         return this.id - o.getId();
-//        return this.skills.size() - o.getSkills().size();
     }
 }

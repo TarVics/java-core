@@ -1,7 +1,6 @@
 package resolves.hw4.task3;
 
 import java.util.*;
-import java.util.function.Consumer;
 
 public class Main {
 
@@ -178,11 +177,9 @@ public class Main {
         // Створити TreeSet з 10 об'єктів, посортовану за кількістю скілів від меньшого до більшого
         TreeSet<User> usersTreeSet = new TreeSet<>();
         fillSet(usersTreeSet);
-        // implements Comparable<User> -> compareTo(User o) -> return this.skills.size() - o.getSkills().size();
-        // OR:
         System.out.println("Sorted by Skill Count:");
         usersTreeSet.stream()
-                //.sorted(Comparator.comparingInt(o -> o.getSkills().size()))
+                .sorted(Comparator.comparingInt(o -> o.getSkills().size()))
                 .forEach(System.out::println);
     }
 }
